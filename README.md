@@ -1,4 +1,4 @@
-# Installing Jenkins on Digital Ocean  ![jenkins](https://github.com/user-attachments/assets/0a854b64-7e42-4941-af78-bea35ccd2f6f)
+# ![jenkins](https://github.com/user-attachments/assets/0a854b64-7e42-4941-af78-bea35ccd2f6f) Installing Jenkins on Digital Ocean  
 
 ## Description
 
