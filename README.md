@@ -56,7 +56,7 @@ This demo project is part of Module 8: Build Automation & CI/CD with Jenkins fro
 
    e) Select **Create Droplet**
 
-3. Configuring Firewall on Digital Ocean: Following security best practices, configure the firewall's inbound rules. In this case, you only allow inbound SSH access from your machine to the Droplet and access to Jenkins ports. restricting all other unnecessary connections.
+3. Configuring Firewall on Digital Ocean: Following security best practices, configure the firewall's inbound rules. In this case, you only allow inbound SSH access from your machine to the Droplet and access to browser port. restricting all other unnecessary connections.
 
 4. Select the **Networking** option from the left panel, then choose **Firewall**.
 
@@ -65,9 +65,8 @@ This demo project is part of Module 8: Build Automation & CI/CD with Jenkins fro
 5. Click on **Create Firewall**
   
 6. Set the firewall rules for incoming traffic.<br>
-   Allow SSH access from your machine by adding an inbound rule that allows traffic from the public IP address of your machine on port 22 and Jenkins ports.
+   Allow SSH access from your machine by adding an inbound rule that allows traffic from the public IP address of your machine on port 22 and browser port.
 
-   <img src="" width=800 />
    
 7. SSH into the droplet to verify that everything works as expected.
 
