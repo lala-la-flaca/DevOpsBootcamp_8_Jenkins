@@ -89,7 +89,7 @@ This demo project is part of Module 8: Build Automation & CI/CD with Jenkins fro
 
    [Docker Hub](https://hub.docker.com/r/jenkins/jenkins)
 
-3. Run the Docker container. We must map two ports the host 8080 and 50000. The first port allows us to access the browser, and the second one allows the Master-workers communication.
+3. Run the Docker container while mapping two ports: 8080 and 50000. Port 8080 enables browser access, while port 50000 facilitates communication between the master and worker nodes.
 
    ```bash
      docker run \
@@ -103,7 +103,7 @@ This demo project is part of Module 8: Build Automation & CI/CD with Jenkins fro
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/3%20Pulling%20and%20Running%20Jenkins%20Container.png" width=800 />
    
    
-4. Verify that the container is running and the container ID.
+4. Verify that the container is running and get its container ID.
 
    ```bash
    docker ps
@@ -111,7 +111,7 @@ This demo project is part of Module 8: Build Automation & CI/CD with Jenkins fro
 
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/4%20Jenkins%20container%20running.PNG" width=800 />
    
-5. Enter the Jenkins container and obtain the Initial Administrator password, which is located at /var/jenkins_home/secrets/initialAdminPassword.
+5. Access the Jenkins container and obtain the Initial Administrator password from: /var/jenkins_home/secrets/initialAdminPassword.
 
    ```bash
    docker exec -it d4d4ccb59734 bash
@@ -120,7 +120,7 @@ This demo project is part of Module 8: Build Automation & CI/CD with Jenkins fro
 
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/6%20GEtting%20password%20to%20access%20browser.png" width=800 />
    
-6. Verify the mounted volume on the Droplet.
+6. Verify the volume mounted on the Droplet.
 
    ```bash
    docker volume inspect jenkins_home
@@ -128,7 +128,7 @@ This demo project is part of Module 8: Build Automation & CI/CD with Jenkins fro
 
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/7%20Checking%20Mounted%20Volume%20on%20droplet.png" width=800 />
 
-7. Open a browser and navigate to Jenkins.
+7. Open a browser and go to Jenkins.
 
    [Jenkins](HTTP://198.199.70.18:8080)
    
