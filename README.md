@@ -83,11 +83,14 @@ This demo project is part of Module 8: Build Automation & CI/CD with Jenkins fro
    apt install net-tools
    snap install docker
    ```
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/3%20Pulling%20and%20Running%20Jenkins%20Container.png" width=800 />
+
 2. Verify the official Jenkins image on DockerHub.
 
    [Docker Hub](https://hub.docker.com/r/jenkins/jenkins)
 
-3. Run the Docker container. We must map to ports to the host 8080 and 50000. The first port allows us to access the browser, and the second one allows the Master-workers communication.
+3. Run the Docker container. We must map two ports the host 8080 and 50000. The first port allows us to access the browser, and the second one allows the Master-workers communication.
 
    ```bash
      docker run \
@@ -97,26 +100,46 @@ This demo project is part of Module 8: Build Automation & CI/CD with Jenkins fro
     -v jenkins_home:/var/jenkins_home \
     jenkins/jenkins:lts
      ```
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/3%20Pulling%20and%20Running%20Jenkins%20Container.png" width=800 />
+   
+   
 4. Verify that the container is running and the container ID.
 
    ```bash
    docker ps
    ```
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/4%20Jenkins%20container%20running.PNG" width=800 />
    
-4. Enter the Jenkins container and obtain the Initial Administrator password, which is located at /var/jenkins_home/secrets/initialAdminPassword.
+5. Enter the Jenkins container and obtain the Initial Administrator password, which is located at /var/jenkins_home/secrets/initialAdminPassword.
 
    ```bash
    docker exec -it d4d4ccb59734 bash
    cat /var/jenkins_home/secrets/initialAdminPassword 
    ```
-5. Verify the mounted volume on Droplet.
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/6%20GEtting%20password%20to%20access%20browser.png" width=800 />
+   
+6. Verify the mounted volume on the Droplet.
 
    ```bash
    docker volume inspect jenkins_home
    ```
 
-6. Open a browser and navigate to Jenkins.
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/7%20Checking%20Mounted%20Volume%20on%20droplet.png" width=800 />
+
+7. Open a browser and navigate to Jenkins.
+
    [Jenkins](HTTP://198.199.70.18:8080)
    
-7. Initialize Jenkins, entering  the password obtained from the Jenkins container.
+8. Initialize Jenkins, entering  the password obtained from the Jenkins container and install suggested plugins.
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/8%20Eneter%20passsword%20and%20install%20suggested%20plugins.png" width=800 />
+   
+9. Jenkins is ready.
+
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_8_Jenkins/blob/main/Img/9%20Jenkins%20is%20ready.png" width=800 />
+   
+   
       
